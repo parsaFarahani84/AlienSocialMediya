@@ -7,4 +7,5 @@ const Atomdata = atom([
     status: false,
   },
 ]);
+
 export { Atomdata };

@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import "./App.css";
 import { Atomdata } from "./jotai/JotaiData";
 import { useState } from "react";
-import { BiCircle } from "react-icons/bi";
+import { BiCircle, BiTrash, BiPencil, BiCheckCircle } from "react-icons/bi";
 
 function App() {
   const [data, setData] = useAtom(Atomdata);
@@ -10,17 +10,32 @@ function App() {
 
   const formHandler = function (e) {
     e.preventDefault();
-    console.log(input);
+
     setData([
-      ...data,
       {
         id: Math.random(),
-        status: false,
         title: input,
+        status: false,
       },
+      ...data,
     ]);
     setInput("");
   };
+
+  const IdHandler = function (i) {
+    setData((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === i.id ? { ...todo, status: !i.status } : todo
+      )
+    );
+  };
+
+  const deleteHandler = function (i) {
+    const newDeleted = data.filter((e) => e.id !== i.id);
+    setData(newDeleted);
+  };
+
+  const editHndler = function (i) {};
 
   return (
     <div className="todo-app">
@@ -36,10 +51,19 @@ function App() {
         </div>
         <div className="todo-list">
           {data.map((i) => (
-            <div key={i.id} className="todo-item">
+            <div key={i.id} className={`todo-item ${i.status ? "done" : ""}`}>
               <h2>{i.title}</h2>
               <div>
-                <BiCircle className="icon" />
+                {!i.status ? (
+                  <BiCircle onClick={() => IdHandler(i)} className="icon" />
+                ) : (
+                  <BiCheckCircle
+                    onClick={() => IdHandler(i)}
+                    className="icon"
+                  />
+                )}
+                <BiTrash onClick={() => deleteHandler(i)} className="icon" />
+                <BiPencil onClick={() => editHndler(i)} className="icon" />
               </div>
             </div>
           ))}
