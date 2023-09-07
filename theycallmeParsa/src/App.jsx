@@ -8,7 +8,6 @@ function App() {
   const [data, setData] = useAtom(Atomdata);
   const [input, setInput] = useState("");
 
-  // console.log(data);
   const formHandler = function (e) {
     e.preventDefault();
 
