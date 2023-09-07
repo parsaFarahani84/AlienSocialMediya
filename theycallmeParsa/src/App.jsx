@@ -8,6 +8,7 @@ function App() {
   const [data, setData] = useAtom(Atomdata);
   const [input, setInput] = useState("");
 
+  // console.log(data);
   const formHandler = function (e) {
     e.preventDefault();
 
@@ -40,7 +41,7 @@ function App() {
     setData(newDeleted);
   };
 
-  const [update, setUpdate] = useState("");
+  // const [update, setUpdate] = useState("");
 
   const editHndler = function (i) {};
 
