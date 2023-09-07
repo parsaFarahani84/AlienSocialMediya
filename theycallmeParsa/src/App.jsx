@@ -11,14 +11,19 @@ function App() {
   const formHandler = function (e) {
     e.preventDefault();
 
-    setData([
-      {
-        id: Math.random(),
-        title: input,
-        status: false,
-      },
-      ...data,
-    ]);
+    if (input.length > 0) {
+      setData([
+        {
+          id: Math.random(),
+          title: input,
+          status: false,
+        },
+        ...data,
+      ]);
+    } else {
+      return;
+    }
+
     setInput("");
   };
 
@@ -34,6 +39,8 @@ function App() {
     const newDeleted = data.filter((e) => e.id !== i.id);
     setData(newDeleted);
   };
+
+  const [update, setUpdate] = useState("");
 
   const editHndler = function (i) {};
 
