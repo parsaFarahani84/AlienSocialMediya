@@ -3,3 +3,72 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* CSS */
+
+.todo-app {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  width: 60vw;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Add more styles as needed */
