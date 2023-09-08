@@ -2,7 +2,13 @@ import { useAtom } from "jotai";
 import "./App.css";
 import { Atomdata } from "./jotai/JotaiData";
 import { useState } from "react";
-import { BiCircle, BiTrash, BiPencil, BiCheckCircle } from "react-icons/bi";
+import {
+  BiCircle,
+  BiTrash,
+  BiPencil,
+  BiCheckCircle,
+  BiSolidSend,
+} from "react-icons/bi";
 
 function App() {
   const [data, setData] = useAtom(Atomdata);
@@ -43,6 +49,7 @@ function App() {
         todo.id === i.id ? { ...todo, enableEditing: !i.enableEditing } : todo
       )
     );
+    setUpdated("");
   };
 
   const updateNewValue = function (i) {
@@ -61,6 +68,7 @@ function App() {
         )
       );
     }
+    setUpdated("");
   };
 
   const deleteHandler = function (i) {
@@ -78,7 +86,9 @@ function App() {
             placeholder="Add a new todo"
             className="todo-input"
           />
-          <button className="add-button">Add</button>
+          <button className="add-button">
+            <BiSolidSend className="icon" />
+          </button>
         </div>
         <div className="todo-list">
           {data.map((i) => (
@@ -86,13 +96,19 @@ function App() {
               {i.enableEditing ? (
                 <form>
                   <input
-                    value={update}
+                    // value={update}
+                    placeholder={i.title}
                     type="text"
                     className="enable-input"
                     onChange={(e) => setUpdated(e.target.value)}
                     autoFocus
                   />
-                  <button onClick={() => updateNewValue(i)}>update</button>
+                  <button
+                    className="updateBtn"
+                    onClick={() => updateNewValue(i)}
+                  >
+                    update
+                  </button>
                 </form>
               ) : (
                 <h2>{i.title}</h2>
