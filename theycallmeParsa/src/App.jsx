@@ -54,6 +54,7 @@ function App() {
             : todo
         )
       );
+      console.log("yes");
     } else {
       setData((prevdata) =>
         prevdata.map((todo) =>
