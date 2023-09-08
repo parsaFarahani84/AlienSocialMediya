@@ -45,26 +45,27 @@ function App() {
     );
   };
 
-  const deleteHandler = function (i) {
-    const newDeleted = data.filter((e) => e.id !== i.id);
-    setData(newDeleted);
-  };
-
   const updateNewValue = function (i) {
-    if (update.length === 0) {
+    if (update.length > 0) {
       setData((prevdata) =>
         prevdata.map((todo) =>
-          todo.id === i.id ? { ...todo, enableEditing: !i.enableEditing } : todo
+          todo.id === i.id
+            ? { ...todo, title: update, enableEditing: false }
+            : todo
+        )
+      );
+    } else {
+      setData((prevdata) =>
+        prevdata.map((todo) =>
+          todo.id === i.id ? { ...todo, enableEditing: false } : todo
         )
       );
     }
-    setData((prevdata) =>
-      prevdata.map((todo) =>
-        todo.id === i.id
-          ? { ...todo, title: update, enableEditing: false }
-          : todo
-      )
-    );
+  };
+
+  const deleteHandler = function (i) {
+    const newDeleted = data.filter((e) => e.id !== i.id);
+    setData(newDeleted);
   };
 
   return (
@@ -85,6 +86,7 @@ function App() {
               {i.enableEditing ? (
                 <form>
                   <input
+                    value={update}
                     type="text"
                     className="enable-input"
                     onChange={(e) => setUpdated(e.target.value)}
