@@ -50,7 +50,22 @@ function App() {
     setData(newDeleted);
   };
 
-  // const [update, setUpdate] = useState("");
+  const updateNewValue = function (i) {
+    if (update.length === 0) {
+      setData((prevdata) =>
+        prevdata.map((todo) =>
+          todo.id === i.id ? { ...todo, enableEditing: !i.enableEditing } : todo
+        )
+      );
+    }
+    setData((prevdata) =>
+      prevdata.map((todo) =>
+        todo.id === i.id
+          ? { ...todo, title: update, enableEditing: false }
+          : todo
+      )
+    );
+  };
 
   return (
     <div className="todo-app">
@@ -68,15 +83,15 @@ function App() {
           {data.map((i) => (
             <div key={i.id} className={`todo-item ${i.status ? "done" : ""}`}>
               {i.enableEditing ? (
-                <div>
+                <form>
                   <input
                     type="text"
                     className="enable-input"
-                    value={update}
                     onChange={(e) => setUpdated(e.target.value)}
+                    autoFocus
                   />
-                  <button>update</button>
-                </div>
+                  <button onClick={() => updateNewValue(i)}>update</button>
+                </form>
               ) : (
                 <h2>{i.title}</h2>
               )}
