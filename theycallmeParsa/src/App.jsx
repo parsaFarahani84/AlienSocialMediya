@@ -7,6 +7,7 @@ import { BiCircle, BiTrash, BiPencil, BiCheckCircle } from "react-icons/bi";
 function App() {
   const [data, setData] = useAtom(Atomdata);
   const [input, setInput] = useState("");
+  const [update, setUpdated] = useState("");
 
   const formHandler = function (e) {
     e.preventDefault();
@@ -17,6 +18,7 @@ function App() {
           id: Math.random(),
           title: input,
           status: false,
+          enableEditing: false,
         },
         ...data,
       ]);
@@ -35,14 +37,20 @@ function App() {
     );
   };
 
+  const editHndler = function (i) {
+    setData((prevdata) =>
+      prevdata.map((todo) =>
+        todo.id === i.id ? { ...todo, enableEditing: !i.enableEditing } : todo
+      )
+    );
+  };
+
   const deleteHandler = function (i) {
     const newDeleted = data.filter((e) => e.id !== i.id);
     setData(newDeleted);
   };
 
   // const [update, setUpdate] = useState("");
-
-  const editHndler = function (i) {};
 
   return (
     <div className="todo-app">
@@ -59,7 +67,19 @@ function App() {
         <div className="todo-list">
           {data.map((i) => (
             <div key={i.id} className={`todo-item ${i.status ? "done" : ""}`}>
-              <h2>{i.title}</h2>
+              {i.enableEditing ? (
+                <div>
+                  <input
+                    type="text"
+                    className="enable-input"
+                    value={update}
+                    onChange={(e) => setUpdated(e.target.value)}
+                  />
+                  <button>update</button>
+                </div>
+              ) : (
+                <h2>{i.title}</h2>
+              )}
               <div>
                 {!i.status ? (
                   <BiCircle onClick={() => IdHandler(i)} className="icon" />
