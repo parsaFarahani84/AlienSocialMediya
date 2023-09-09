@@ -8,7 +8,9 @@ import {
   BiPencil,
   BiCheckCircle,
   BiSolidSend,
+  BiAddToQueue,
 } from "react-icons/bi";
+import axios from "axios";
 
 function App() {
   const [data, setData] = useAtom(Atomdata);
@@ -77,6 +79,20 @@ function App() {
     setData(newDeleted);
   };
 
+  const apiHandler = async () => {
+    const request = (await axios.get("https://www.boredapi.com/api/activity"))
+      .data.activity;
+    setData([
+      {
+        id: Math.random(),
+        title: request,
+        status: false,
+        enableEditing: false,
+      },
+      ...data,
+    ]);
+  };
+
   return (
     <div className="todo-app">
       <form onSubmit={formHandler} className="todo-form">
@@ -89,6 +105,9 @@ function App() {
           />
           <button className="add-button">
             <BiSolidSend className="icon" />
+          </button>
+          <button className="add-button">
+            <BiAddToQueue onClick={apiHandler} className="icon" />
           </button>
         </div>
         <div className="todo-list">
