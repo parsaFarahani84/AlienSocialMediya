@@ -35,7 +35,6 @@ function App() {
     }
 
     setInput("");
-    console.log("testing branch");
   };
 
   const IdHandler = function (i) {
