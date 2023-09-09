@@ -33,6 +33,7 @@ function App() {
     }
 
     setInput("");
+    console.log("testing branch");
   };
 
   const IdHandler = function (i) {
@@ -96,7 +97,6 @@ function App() {
               {i.enableEditing ? (
                 <form>
                   <input
-                    // value={update}
                     placeholder={i.title}
                     type="text"
                     className="enable-input"
