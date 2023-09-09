@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
-import "./App.css";
 import { Atomdata } from "./jotai/JotaiData";
-import { useState } from "react";
+import "./App.css";
+import { useEffect, useState } from "react";
 import {
   BiCircle,
   BiTrash,
