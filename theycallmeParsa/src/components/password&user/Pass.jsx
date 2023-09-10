@@ -1,10 +1,16 @@
 import React from "react";
 import "./Pass.css";
 import img from "../../imgs/n.png";
-import { GiAlienStare, GiBalaclava, GiKey } from "react-icons/gi";
+import { GiAlienStare } from "react-icons/gi";
+import { BiUserCircle, BiKey } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
 
 function Pass() {
+  const userP = {
+    username: "parsa",
+    pass: "parsa1100",
+  };
+
   return (
     <div className="mother-p">
       <div className="pass-container">
@@ -20,12 +26,19 @@ function Pass() {
           <div className="p-parental">
             <div>
               <div className="inputs">
-                {/* <GiBalaclava className="icon-p" /> */}
+                <label className="label">
+                  {" "}
+                  <BiUserCircle className="icon-m" />
+                  username
+                </label>
                 <input placeholder="User" />
               </div>
 
               <div className="inputs">
-                {/* <GiKey className="icon-p" /> */}
+                <label className="label">
+                  <BiKey className="icon-m" />
+                  password
+                </label>
                 <input placeholder="Password" />
               </div>
             </div>
