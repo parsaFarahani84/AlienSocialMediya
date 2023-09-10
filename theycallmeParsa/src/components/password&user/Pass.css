@@ -1,0 +1,94 @@
+.pass-container {
+  width: 60rem;
+  height: 33rem;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.mother-p {
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pass-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #525354; */
+  background-image: linear-gradient(to right bottom, #272829, #61677a);
+  border-right: 3px solid black;
+}
+.pass-image img {
+  width: 70%;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.pass-login {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.both-in {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pass-login input {
+  padding: 1rem 1.5rem;
+  width: 80%;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+}
+
+.icon-p {
+  font-size: 1.5rem;
+}
+
+.icon-s {
+  font-size: 2rem;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.g-btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+  margin-left: 1.5rem;
+  transition: all 0.3s;
+  border: 2px solid white;
+}
+
+.g-btn:hover {
+  transform: translateY(-7px);
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
