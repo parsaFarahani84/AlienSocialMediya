@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Pass.css";
 import { GiAlienStare, GiArchitectMask, GiAndroidMask } from "react-icons/gi";
-import { BiUserCircle, BiKey, BiEditAlt } from "react-icons/bi";
+import { BiUserCircle, BiKey, BiEditAlt, BiCheckCircle } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
@@ -78,11 +78,15 @@ function Pass() {
             <div className="grouped">
               {value ? (
                 <Link to="/home">
-                  <button className="g-btn">Go to pannel</button>
+                  <button className="g-btn">
+                    {" "}
+                    <TbDoorEnter />
+                    Go to pannel
+                  </button>
                 </Link>
               ) : (
                 <button className="g-btn" onClick={checkData}>
-                  <TbDoorEnter />
+                  <BiCheckCircle />
                   Submit
                 </button>
               )}

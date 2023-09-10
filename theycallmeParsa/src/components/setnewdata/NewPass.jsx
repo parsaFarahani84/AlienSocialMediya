@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./NewPass.css";
 import { GiBirdMask } from "react-icons/gi";
-import { BiUserCircle, BiKey, BiEditAlt } from "react-icons/bi";
-import { TbDoorEnter } from "react-icons/tb";
+import { BiUserCircle, BiKey, BiCheckCircle } from "react-icons/bi";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -66,7 +65,7 @@ function Pass() {
 
             <div className="grouped">
               <button className="g-btn" onClick={checkData}>
-                <TbDoorEnter />
+                <BiCheckCircle />
                 Submit
               </button>
               <Link to="/">
