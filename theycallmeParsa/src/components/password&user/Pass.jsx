@@ -57,6 +57,7 @@ function Pass() {
                   username
                 </label>
                 <input
+                  className="cool-link"
                   placeholder="User"
                   onChange={(e) => setUser(e.target.value)}
                 />
@@ -68,6 +69,7 @@ function Pass() {
                   password
                 </label>
                 <input
+                  className="cool-link"
                   type="password"
                   placeholder="Password"
                   onChange={(e) => setPass(e.target.value)}

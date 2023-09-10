@@ -6,10 +6,8 @@ import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function Pass() {
-  const [value, setValue] = useState(false);
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
-  const [wel, setWel] = useState(true);
 
   const userP = {
     username: "parsa",
@@ -38,13 +36,14 @@ function Pass() {
           </h1>
           <form className="p-parental" onSubmit={checkData}>
             <div>
-              <div className="inputs">
+              <div className="inputs cool-link">
                 <label className="label">
                   {" "}
                   <BiUserCircle className="icon-m" />
                   username
                 </label>
                 <input
+                  className="cool-link"
                   placeholder="User"
                   onChange={(e) => setUser(e.target.value)}
                 />
@@ -56,6 +55,7 @@ function Pass() {
                   password
                 </label>
                 <input
+                  className="cool-link"
                   type="password"
                   placeholder="Password"
                   onChange={(e) => setPass(e.target.value)}

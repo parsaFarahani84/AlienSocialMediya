@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #279eff, #0e2954);
+  background-image: linear-gradient(to right bottom, #1796ff, #061c3e);
 }
 
 .pass-login {
@@ -51,7 +51,23 @@
   width: 80%;
   font-size: 1rem;
   border: none;
-  border-bottom: 2px solid black;
+  transition: all 0.3s;
+  line-height: 1;
+  background: linear-gradient(to right, rgb(9, 9, 9), rgb(0, 0, 0)),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.pass-login input:focus {
+  background-size: 0 2px, 100% 2px;
 }
 
 .h1 {
