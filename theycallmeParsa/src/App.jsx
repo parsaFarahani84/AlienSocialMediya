@@ -1,7 +1,8 @@
 import { useAtom } from "jotai";
 import { Atomdata } from "./jotai/JotaiData";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { GiBlackBook } from "react-icons/gi";
+import { useState } from "react";
 import {
   BiCircle,
   BiTrash,
@@ -100,51 +101,59 @@ function App() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Add a new todo"
-            className="todo-input"
+            className="todo-input fade-in-element"
           />
-          <button className="add-button">
+          <button className="add-button fade-in-element2">
             <BiSolidSend className="icon" />
           </button>
-          <button className="add-button">
+          <button className="add-button fade-in-element3">
             <BiAddToQueue onClick={apiHandler} className="icon" />
           </button>
         </div>
         <div className="todo-list">
-          {data.map((i) => (
-            <div key={i.id} className={`todo-item ${i.status ? "done" : ""}`}>
-              {i.enableEditing ? (
-                <form>
-                  <input
-                    placeholder={i.title}
-                    type="text"
-                    className="enable-input"
-                    onChange={(e) => setUpdated(e.target.value)}
-                    autoFocus
-                  />
-                  <button
-                    className="updateBtn"
-                    onClick={() => updateNewValue(i)}
-                  >
-                    update
-                  </button>
-                </form>
-              ) : (
-                <h2>{i.title}</h2>
-              )}
-              <div>
-                {!i.status ? (
-                  <BiCircle onClick={() => IdHandler(i)} className="icon" />
+          {data.length === 0 ? (
+            <h2 className="no">
+              No Todo Yet
+              <GiBlackBook />
+            </h2>
+          ) : (
+            data.map((i) => (
+              <div key={i.id} className={`todo-item ${i.status ? "done" : ""}`}>
+                {i.enableEditing ? (
+                  <form>
+                    <input
+                      placeholder={i.title}
+                      type="text"
+                      className="enable-input"
+                      onChange={(e) => setUpdated(e.target.value)}
+                      autoFocus
+                    />
+                    <button
+                      className="updateBtn"
+                      onClick={() => updateNewValue(i)}
+                    >
+                      update
+                    </button>
+                  </form>
                 ) : (
-                  <BiCheckCircle
-                    onClick={() => IdHandler(i)}
-                    className="icon"
-                  />
+                  <h2>{i.title}</h2>
                 )}
-                <BiTrash onClick={() => deleteHandler(i)} className="icon" />
-                <BiPencil onClick={() => editHndler(i)} className="icon" />
+                <div>
+                  {!i.status ? (
+                    <BiCircle onClick={() => IdHandler(i)} className="icon" />
+                  ) : (
+                    <BiCheckCircle
+                      onClick={() => IdHandler(i)}
+                      className="icon"
+                    />
+                  )}
+                  <BiTrash onClick={() => deleteHandler(i)} className="icon" />
+                  <BiPencil onClick={() => editHndler(i)} className="icon" />
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
+          {/* {} */}
         </div>
       </form>
     </div>

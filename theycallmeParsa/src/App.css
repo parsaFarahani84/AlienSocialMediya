@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap");
 
 /* CSS */
 
 .todo-app {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto;
   padding: 20px;
   font-family: "Rubik", sans-serif;
@@ -85,7 +86,7 @@
 }
 
 .done {
-  background-color: #57c5b6;
+  background-color: #0a6ebd;
   border: 2px solid white;
   color: white;
 }
@@ -125,10 +126,40 @@
   }
 
   .todo-item {
-    width: 20rem;
+    width: 23rem;
   }
 
   .enable-input {
     width: 8rem;
   }
+}
+
+.no {
+  color: #ccc;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with full transparency */
+    transform: translateY(20px); /* Move the element down by 20 pixels */
+  }
+  100% {
+    opacity: 1; /* End with full visibility */
+    transform: translateY(0); /* Return the element to its original position */
+  }
+}
+
+/* Apply the animation to the element you want to fade in */
+.fade-in-element {
+  animation: fadeIn 0.5s ease-in; /* Adjust the duration and timing function as needed */
+}
+
+.fade-in-element2 {
+  animation: fadeIn 0.6s ease-in; /* Adjust the duration and timing function as needed */
+}
+
+.fade-in-element3 {
+  animation: fadeIn 0.7s ease-in; /* Adjust the duration and timing function as needed */
 }
