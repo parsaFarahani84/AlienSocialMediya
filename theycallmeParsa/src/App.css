@@ -110,3 +110,25 @@
   cursor: pointer;
   margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 450px) {
+  .todo-app {
+    height: 100vh;
+  }
+
+  .todo-form {
+    margin-top: 3rem;
+  }
+  .add-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .todo-item {
+    width: 20rem;
+  }
+
+  .enable-input {
+    width: 8rem;
+  }
+}
