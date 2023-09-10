@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Pass.css";
-import { GiAlienStare, GiArchitectMask } from "react-icons/gi";
+import { GiAlienStare, GiArchitectMask, GiAndroidMask } from "react-icons/gi";
 import { BiUserCircle, BiKey, BiEditAlt } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ function Pass() {
   const [value, setValue] = useState(false);
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+  const [wel, setWel] = useState(true);
 
   const userP = {
     username: "parsa",
@@ -20,6 +21,7 @@ function Pass() {
     if (user === userP.username && pass === userP.pass) {
       setValue(true);
     }
+    setWel(false);
   };
 
   return (
@@ -29,22 +31,22 @@ function Pass() {
 
         <div className="pass-login">
           <h1 className="h1">
-            {value ? (
-              <div>
+            {wel ? (
+              <div className="texty-p">
                 <GiAlienStare className="icon-s" />
-                Wlcome Back!
+                Welcome Back
+              </div>
+            ) : value ? (
+              <div className="texty-p">
+                <GiAndroidMask className="icon-s" />
+                Let's Gooo!
               </div>
             ) : (
-              <div>
+              <div className="texty-p">
                 <GiArchitectMask className="icon-s" />
                 Try Again...
               </div>
             )}
-
-            {/* <div>
-              <GiAnimalSkull className="icon-s" />
-              Wrong Pass/User
-            </div> */}
           </h1>
           <form className="p-parental" onSubmit={checkData}>
             <div>
@@ -66,29 +68,32 @@ function Pass() {
                   password
                 </label>
                 <input
+                  type="password"
                   placeholder="Password"
                   onChange={(e) => setPass(e.target.value)}
                 />
               </div>
             </div>
 
-            {value ? (
-              <Link to="/home">
-                <button className="g-btn">Go to pannel</button>
-              </Link>
-            ) : (
-              <button className="g-btn" onClick={checkData}>
-                <TbDoorEnter />
-                Submit
-              </button>
-            )}
+            <div className="grouped">
+              {value ? (
+                <Link to="/home">
+                  <button className="g-btn">Go to pannel</button>
+                </Link>
+              ) : (
+                <button className="g-btn" onClick={checkData}>
+                  <TbDoorEnter />
+                  Submit
+                </button>
+              )}
 
-            <Link to="/change">
-              <button className="g-btn">
-                <BiEditAlt />
-                Set New Data
-              </button>
-            </Link>
+              <Link to="/change">
+                <button className="g-btn">
+                  <BiEditAlt />
+                  Set New Data
+                </button>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

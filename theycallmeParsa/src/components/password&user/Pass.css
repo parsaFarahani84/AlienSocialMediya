@@ -5,8 +5,14 @@
   margin-top: 1rem;
   border-radius: 1rem;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   overflow: hidden;
+}
+
+.texty-p {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .mother-p {
@@ -19,14 +25,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #525354;
   background-image: linear-gradient(to right bottom, #ff8c32, #000000);
-  /* border-right: 3px solid black; */
 }
-.pass-image img {
-  width: 100%;
-  background-position: bottom;
-  background-size: contain;
+
+.pass-image2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #279eff, #0e2954);
 }
 
 .pass-login {
@@ -61,7 +67,7 @@
 }
 
 .icon-s {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .icon-m {
@@ -77,6 +83,10 @@
   align-items: flex-start;
 }
 
+.grouped {
+  display: flex;
+}
+
 .g-btn {
   font-size: 1rem;
   padding: 0.7rem 1.5rem;
@@ -86,7 +96,9 @@
   cursor: pointer;
   background-color: #000;
   color: white;
-  /* margin-left: 1.5rem; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   transition: all 0.3s;
   border: 2px solid white;
 }
