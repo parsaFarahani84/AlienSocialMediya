@@ -4,6 +4,8 @@ import { GiAlienStare, GiArchitectMask, GiAndroidMask } from "react-icons/gi";
 import { BiUserCircle, BiKey, BiEditAlt, BiCheckCircle } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { useAtom } from "jotai";
+import Atom from "../../Atom";
 
 function Pass() {
   const [value, setValue] = useState(false);
@@ -11,14 +13,11 @@ function Pass() {
   const [pass, setPass] = useState("");
   const [wel, setWel] = useState(true);
 
-  const userP = {
-    username: "parsa",
-    pass: "parsa1100",
-  };
+  const [data, setData] = useAtom(Atom);
 
   const checkData = function (e) {
     e.preventDefault();
-    if (user === userP.username && pass === userP.pass) {
+    if (user === data.name && pass === data.pass) {
       setValue(true);
     }
     setWel(false);

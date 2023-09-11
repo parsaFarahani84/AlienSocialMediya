@@ -4,26 +4,45 @@ import { GiBirdMask } from "react-icons/gi";
 import { BiUserCircle, BiKey, BiCheckCircle } from "react-icons/bi";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useAtom } from "jotai";
+import Atom from "../../Atom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Pass() {
+  //   const notify = () => toast("Data Updated");
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+  const [data, setData] = useAtom(Atom);
 
-  const userP = {
-    username: "parsa",
-    pass: "parsa1100",
-  };
-
-  const checkData = function (e) {
+  const changedData = (e) => {
     e.preventDefault();
-    if (user === userP.username && pass === userP.pass) {
-      setValue(true);
+
+    if (user.length > 0 && pass.length > 0) {
+      setData({
+        name: user,
+        pass: pass,
+      });
+
+      toast("Data Updated");
+    } else {
+      toast.warn("No Data Passed");
     }
-    setWel(false);
   };
 
   return (
     <div className="mother-p">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="pass-container">
         <div className="pass-image2">{/* <img src={img} /> */}</div>
 
@@ -34,7 +53,7 @@ function Pass() {
               Change User & Pass
             </div>
           </h1>
-          <form className="p-parental" onSubmit={checkData}>
+          <form className="p-parental" onSubmit={changedData}>
             <div>
               <div className="inputs cool-link">
                 <label className="label">
@@ -64,7 +83,7 @@ function Pass() {
             </div>
 
             <div className="grouped">
-              <button className="g-btn" onClick={checkData}>
+              <button className="g-btn" onClick={changedData}>
                 <BiCheckCircle />
                 Submit
               </button>
