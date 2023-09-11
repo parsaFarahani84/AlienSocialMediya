@@ -3,6 +3,7 @@
 body {
   background-color: #111;
   font-family: "Rubik", sans-serif;
+  overflow-y: hidden;
 }
 
 a {

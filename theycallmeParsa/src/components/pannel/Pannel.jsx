@@ -13,7 +13,7 @@ function Pannel() {
   const [data, setData] = useAtom(Atom);
 
   return (
-    <div>
+    <div className="mother-s">
       <div className="left-panel">
         <div className="one">
           <Link to="/" className="right-head">
@@ -36,7 +36,7 @@ function Pannel() {
                 Blog Section
               </div>
               <div>
-                <BsArrowRight className="icon-p" />
+                <BsArrowRight className="icon-p appear" />
               </div>
             </h4>
           </div>
@@ -48,7 +48,7 @@ function Pannel() {
               </div>
               <div>
                 {" "}
-                <BsArrowRight className="icon-p" />
+                <BsArrowRight className="icon-p appear" />
               </div>
             </h4>
           </div>
@@ -60,7 +60,7 @@ function Pannel() {
               </div>
               <div>
                 {" "}
-                <BsArrowRight className="icon-p" />
+                <BsArrowRight className="icon-p appear" />
               </div>
             </h4>
           </div>
@@ -70,9 +70,9 @@ function Pannel() {
                 <FaMicrophoneAlt className="icon-color" />
                 Blog Section
               </div>
-              <div>
+              <div className="">
                 {" "}
-                <BsArrowRight className="icon-p" />
+                <BsArrowRight className="icon-p appear" />
               </div>
             </h4>
           </div>
