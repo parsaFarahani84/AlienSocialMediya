@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Pass.css";
-import { GiAlienStare, GiArchitectMask, GiAndroidMask } from "react-icons/gi";
+import { GiAlienStare, GiArchitectMask } from "react-icons/gi";
 import { BiUserCircle, BiKey, BiEditAlt, BiCheckCircle } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
+import { FaDoorOpen } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import Atom from "../../Atom";
@@ -36,9 +37,9 @@ function Pass() {
                 Welcome Back
               </div>
             ) : value ? (
-              <div className="texty-p">
-                <GiAndroidMask className="icon-s" />
-                Let's Gooo!
+              <div className="texty-p" style={{ fontSize: "2rem" }}>
+                <FaDoorOpen className="icon-s" />
+                Enter To Your Panel.
               </div>
             ) : (
               <div className="texty-p">
