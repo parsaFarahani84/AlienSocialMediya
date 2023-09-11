@@ -1,13 +1,13 @@
 import React from "react";
-import img from "../../imgs/k-r.png";
+import face from "../../imgs/face.jpg";
 import "./Pannel.css";
 import { useAtom } from "jotai";
 import {
   BsFileEarmarkCheckFill,
-  BsArrowRight,
   BsArrow90DegLeft,
+  BsFillBookmarkFill,
 } from "react-icons/bs";
-import { FaEdit, FaMicrophoneAlt } from "react-icons/fa";
+import { BiSolidCircle } from "react-icons/bi";
 import { SiRoundcube } from "react-icons/si";
 import { FiArrowDownRight } from "react-icons/fi";
 import Atom from "../../Atom";
@@ -25,70 +25,41 @@ function Pannel() {
               <SiRoundcube className="icon-s" />
 
               <h2>
-                <span className="colored-t">{data.name}</span>'s panel
+                <span className="colored-t">{data.name}</span>'s chats
               </h2>
             </Link>
           </div>
           <h3 className="intro">
             <FiArrowDownRight />
-            Sections:
+            chats:
           </h3>
           <div className="nav-item">
             <h4>
-              <div>
-                <FaEdit className="icon-color" />
-                Blog Section
-              </div>
-              <div>
-                <BsArrowRight className="icon-p appear" />
+              <div className="center">
+                <BsFillBookmarkFill className="icon-color" />
+                Save Messages
               </div>
             </h4>
           </div>
           <div className="nav-item">
+            <img className="faces" src={face} />
             <h4>
-              <div>
-                <BsFileEarmarkCheckFill className="icon-color" />
-                Todo's
-              </div>
-              <div>
-                {" "}
-                <BsArrowRight className="icon-p appear" />
+              <div className="center">Sarah Jay</div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <p className="unread">1</p>
               </div>
             </h4>
           </div>
           <div className="nav-item">
+            <div className="con-img">
+              <img className="faces" src={face} />
+              <BiSolidCircle className="icon-m online" />
+            </div>{" "}
             <h4>
-              <div>
-                <FaMicrophoneAlt className="icon-color" />
-                Talk
-              </div>
-              <div>
-                {" "}
-                <BsArrowRight className="icon-p appear" />
-              </div>
-            </h4>
-          </div>
-          <div className="nav-item">
-            <h4>
-              <div>
-                <FaMicrophoneAlt className="icon-color" />
-                Blog Section
-              </div>
-              <div className="">
-                {" "}
-                <BsArrowRight className="icon-p appear" />
-              </div>
-            </h4>
-          </div>
-          <div className="nav-item">
-            <h4>
-              <div>
-                <FaMicrophoneAlt className="icon-color" />
-                Blog Section
-              </div>
-              <div className="">
-                {" "}
-                <BsArrowRight className="icon-p appear" />
+              <div className="center">Sarah Jay</div>
+
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <p className="unread">1</p>
               </div>
             </h4>
           </div>
