@@ -29,78 +29,85 @@ function Pass() {
       <div className="pass-container">
         <div className="pass-image">{/* <img src={img} /> */}</div>
 
-        <div className="pass-login">
-          <h1 className="h1">
-            {wel ? (
-              <div className="texty-p">
-                <GiAlienStare className="icon-s" />
-                Welcome Back
-              </div>
-            ) : value ? (
-              <div className="texty-p" style={{ fontSize: "2rem" }}>
-                <FaDoorOpen className="icon-s" />
-                Enter To Your Panel.
-              </div>
-            ) : (
-              <div className="texty-p">
-                <GiArchitectMask className="icon-s" />
-                Try Again...
-              </div>
-            )}
-          </h1>
-          <form className="p-parental" onSubmit={checkData}>
-            <div>
-              <div className="inputs">
-                <label className="label">
-                  {" "}
-                  <BiUserCircle className="icon-m" />
-                  username
-                </label>
-                <input
-                  className="cool-link"
-                  placeholder="User"
-                  onChange={(e) => setUser(e.target.value)}
-                />
-              </div>
-
-              <div className="inputs">
-                <label className="label">
-                  <BiKey className="icon-m" />
-                  password
-                </label>
-                <input
-                  className="cool-link"
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => setPass(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div className="grouped">
-              {value ? (
-                <Link to="/home">
-                  <button className="g-btn">
+        <div className="main-page-log">
+          <div className="pass-login">
+            <h1 className="h1">
+              {wel ? (
+                <div className="texty-p">
+                  <GiAlienStare className="icon-s" />
+                  Welcome Back
+                </div>
+              ) : value ? (
+                <div className="texty-p" style={{ fontSize: "2rem" }}>
+                  <FaDoorOpen className="icon-s" />
+                  Enter To Your Panel.
+                </div>
+              ) : (
+                <div className="texty-p">
+                  <GiArchitectMask className="icon-s" />
+                  Try Again...
+                </div>
+              )}
+            </h1>
+            <form className="p-parental" onSubmit={checkData}>
+              <div>
+                <div className="inputs">
+                  <label className="label">
                     {" "}
-                    <TbDoorEnter />
-                    Go to pannel
+                    <BiUserCircle className="icon-m" />
+                    username
+                  </label>
+                  <input
+                    className="cool-link"
+                    placeholder="User"
+                    onChange={(e) => setUser(e.target.value)}
+                  />
+                </div>
+
+                <div className="inputs">
+                  <label className="label">
+                    <BiKey className="icon-m" />
+                    password
+                  </label>
+                  <input
+                    className="cool-link"
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPass(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="grouped">
+                {value ? (
+                  <Link to="/home">
+                    <button className="g-btn">
+                      {" "}
+                      <TbDoorEnter />
+                      Go to pannel
+                    </button>
+                  </Link>
+                ) : (
+                  <button className="g-btn" onClick={checkData}>
+                    <BiCheckCircle />
+                    Submit
+                  </button>
+                )}
+
+                <Link to="/sign-in">
+                  <button className="g-btn">
+                    <BiEditAlt />
+                    Sign Up
                   </button>
                 </Link>
-              ) : (
-                <button className="g-btn" onClick={checkData}>
-                  <BiCheckCircle />
-                  Submit
-                </button>
-              )}
-
-              <Link to="/change">
-                <button className="g-btn">
-                  <BiEditAlt />
-                  Set New Data
-                </button>
-              </Link>
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
+          <div className="forget-div">
+            <Link to="/change">
+              <p>Forget Password?</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

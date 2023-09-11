@@ -21,13 +21,13 @@ function Pannel() {
       <div className="left-panel">
         <div className="one-main">
           <div className="one">
-            <Link to="/" className="right-head">
+            <div className="right-head">
               <SiRoundcube className="icon-s" />
 
               <h2>
                 <span className="colored-t">{data.name}</span>'s chats
               </h2>
-            </Link>
+            </div>
           </div>
           <h3 className="intro">
             <FiArrowDownRight />
