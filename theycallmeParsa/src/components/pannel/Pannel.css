@@ -12,7 +12,7 @@
 .online {
   margin-left: -1.1rem;
   margin-top: 1.6rem;
-  color: #9400ff;
+  color: #337ccf;
   font-size: 1.3rem;
 }
 
@@ -62,7 +62,7 @@
 } */
 
 .colored-t {
-  color: #9400ff;
+  color: #337ccf;
 }
 
 .intro {
@@ -97,7 +97,7 @@
 .faces {
   width: 20%;
   border-radius: 50%;
-  border: 3px solid #9400ff;
+  border: 3px solid #337ccf;
   margin-right: 0.3rem;
 }
 
@@ -143,6 +143,6 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #9400ff;
+  background-color: #337ccf;
   border-radius: 50%;
 }

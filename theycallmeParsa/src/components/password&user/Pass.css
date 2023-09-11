@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #937af9, #9400ff);
+  background-image: linear-gradient(to right bottom, #937af9, #191d88);
 }
 
 .pass-image2 {
@@ -46,7 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #b8abe3, #3d246c);
+  background-image: linear-gradient(to right bottom, #7091f5, #35155d);
 }
 
 .pass-login {

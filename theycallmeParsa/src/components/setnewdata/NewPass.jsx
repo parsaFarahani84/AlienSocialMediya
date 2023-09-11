@@ -61,7 +61,7 @@ function Pass() {
                     </label>
                     <input
                       className="cool-link"
-                      placeholder="Email"
+                      placeholder="Username"
                       type="email"
                     />
                   </div>
@@ -73,7 +73,7 @@ function Pass() {
                     </label>
                     <input
                       className="cool-link"
-                      placeholder="Email"
+                      placeholder="Password"
                       type="email"
                     />
                   </div>
@@ -87,7 +87,7 @@ function Pass() {
                   </label>
                   <input
                     className="cool-link"
-                    placeholder="Email"
+                    placeholder="Password"
                     type="email"
                   />
                 </div>

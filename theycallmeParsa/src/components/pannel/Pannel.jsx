@@ -40,7 +40,7 @@ function Pannel() {
               >
                 <BsFillBookmarkFill
                   className="icon-color icon-p"
-                  style={{ color: "#9400ff" }}
+                  style={{ color: "#337CCF" }}
                 />
                 Save Messages
               </div>
