@@ -34,9 +34,14 @@ function Pannel() {
             chats:
           </h3>
           <div className="nav-item">
-            <h4>
-              <div className="center">
-                <BsFillBookmarkFill className="icon-color" />
+            <h4 style={{ marginLeft: "15px" }}>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}
+              >
+                <BsFillBookmarkFill
+                  className="icon-color icon-p"
+                  style={{ color: "#9400ff" }}
+                />
                 Save Messages
               </div>
             </h4>
@@ -51,15 +56,13 @@ function Pannel() {
             </h4>
           </div>
           <div className="nav-item">
-            <div className="con-img">
-              <img className="faces" src={face} />
-              <BiSolidCircle className="icon-m online" />
-            </div>{" "}
+            <img className="faces" src={face} />
+            <BiSolidCircle className="icon-m online" />
             <h4>
               <div className="center">Sarah Jay</div>
 
               <div style={{ display: "flex", alignItems: "center" }}>
-                <p className="unread">1</p>
+                <p className="unread">2</p>
               </div>
             </h4>
           </div>

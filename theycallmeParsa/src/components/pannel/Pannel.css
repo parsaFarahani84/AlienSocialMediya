@@ -10,9 +10,10 @@
 }
 
 .online {
-  margin-left: -1rem;
-  margin-top: 0.5rem;
+  margin-left: -1.1rem;
+  margin-top: 1.6rem;
   color: #9400ff;
+  font-size: 1.3rem;
 }
 
 .left-panel {
@@ -96,7 +97,7 @@
 .faces {
   width: 20%;
   border-radius: 50%;
-  border: 2px solid #9400ff;
+  border: 3px solid #9400ff;
   margin-right: 0.3rem;
 }
 
@@ -115,11 +116,15 @@
   color: #333 !important;
 }
 
+.nav-item h3 {
+  display: flex;
+}
+
 .nav-item h4 {
   display: grid;
   grid-template-columns: 2fr 0.5fr;
   gap: 0.3rem;
-  /* margin-left: 1rem; */
+  margin-left: 0.3rem;
   width: 100%;
   font-size: 1.05rem;
   justify-content: space-between;
