@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import {
-  BiCheckCircle,
-  BiLogInCircle,
-  BiUserCircle,
-  BiKey,
-} from "react-icons/bi";
-import { MdEmail, MdAccountCircle } from "react-icons/md";
+import { BiCheckCircle, BiLogInCircle } from "react-icons/bi";
+import { FaExchangeAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import Atom from "../../Atom";
@@ -35,67 +31,38 @@ function Pass() {
     }
   };
 
+  const checkDataTrue = function (e) {
+    e.preventDefault();
+    if (trueUser === data.name && truePass === data.pass) {
+      setTrueData(true);
+    }
+    setTruePass("");
+    setTrueUser("");
+    setUser("");
+    setPass("");
+  };
   // use import { ToastContainer, toast } from "react-toastify";
 
   return (
     <div className="mother-p">
       <div className="pass-container">
-        <div className="pass-image4">{/* <img src={img} /> */}</div>
+        <div className="pass-image2">{/* <img src={img} /> */}</div>
 
         <div className="main-page-log">
           <div className="pass-login">
             <h1 className="h1">
               <div className="texty-p">
-                <MdAccountCircle className="icon-s" />
-                Set New Account
+                <FaExchangeAlt className="icon-s" />
+                Change Password
               </div>
             </h1>
             <form className="p-parental">
               <div>
-                <div className="inputs-2">
-                  <div>
-                    <label className="label">
-                      {" "}
-                      <BiUserCircle className="icon-m" />
-                      Username
-                    </label>
-                    <input
-                      className="cool-link"
-                      placeholder="Email"
-                      type="email"
-                    />
-                  </div>
-                  <div>
-                    <label className="label">
-                      {" "}
-                      <BiKey className="icon-m" />
-                      Password
-                    </label>
-                    <input
-                      className="cool-link"
-                      placeholder="Email"
-                      type="email"
-                    />
-                  </div>
-                </div>
-
-                <div className="inputs">
-                  <label className="label">
-                    {" "}
-                    <BiKey className="icon-m" />
-                    Comfirm Password
-                  </label>
-                  <input
-                    className="cool-link"
-                    placeholder="Email"
-                    type="email"
-                  />
-                </div>
                 <div className="inputs">
                   <label className="label">
                     {" "}
                     <MdEmail className="icon-m" />
-                    Email
+                    Your Email
                   </label>
                   <input
                     className="cool-link"

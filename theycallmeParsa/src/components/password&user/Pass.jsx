@@ -23,6 +23,7 @@ function Pass() {
     }
     setWel(false);
   };
+  // pass-image2
 
   return (
     <div className="mother-p">
@@ -94,7 +95,7 @@ function Pass() {
                   </button>
                 )}
 
-                <Link to="/sign-in">
+                <Link to="/sign-up">
                   <button className="g-btn">
                     <BiEditAlt />
                     Sign Up
