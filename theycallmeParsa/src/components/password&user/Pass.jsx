@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Pass.css";
 import { GiAlienStare, GiArchitectMask } from "react-icons/gi";
 import { BiUserCircle, BiKey, BiEditAlt, BiCheckCircle } from "react-icons/bi";
 import { TbDoorEnter } from "react-icons/tb";
@@ -14,7 +13,6 @@ function Pass() {
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
   const [wel, setWel] = useState(true);
-
   const [data, setData] = useAtom(Atom);
 
   const checkData = function (e) {
@@ -32,22 +30,22 @@ function Pass() {
           <img className="w-[80%]" src={img} />
         </div>
 
-        <div className="main-page-log">
+        <div className="flex flex-col justify-between">
           <div className="p-8 flex flex-col">
             <h1 className="flex items-center justify-center text-[2.2rem]">
               {wel ? (
                 <div className="flex font-bold justify-center items-center m-4">
-                  <GiAlienStare className="icon-s" />
+                  <GiAlienStare className="text-[2.5rem]" />
                   Welcome Back
                 </div>
               ) : value ? (
                 <div className="flex font-bold justify-center items-center m-4 text-pl">
-                  <FaDoorOpen className="icon-s" />
+                  <FaDoorOpen className="text-[2.5rem]" />
                   Enter To Your Panel.
                 </div>
               ) : (
                 <div className="flex font-bold justify-center items-center m-4">
-                  <GiArchitectMask className="icon-s" />
+                  <GiArchitectMask className="text-[2.5rem]" />
                   Try Again...
                 </div>
               )}
@@ -57,7 +55,7 @@ function Pass() {
                 <div className="w-100 flex justify-center mt-8 items-start flex-col">
                   <label className="ml-[-0.4rem] text-[0.8rem] mb-[-0.6rem] flex items-center z-99">
                     {" "}
-                    <BiUserCircle className="icon-m" />
+                    <BiUserCircle className="text-[0.9rem]" />
                     username
                   </label>
                   <input
@@ -69,7 +67,7 @@ function Pass() {
 
                 <div className="w-100 flex justify-center mt-8 items-start flex-col">
                   <label className="ml-[-0.4rem] text-[0.8rem] mb-[-0.6rem] flex items-center z-99">
-                    <BiKey className="icon-m" />
+                    <BiKey className="text-[0.9rem]" />
                     password
                   </label>
                   <input
@@ -81,24 +79,27 @@ function Pass() {
                 </div>
               </div>
 
-              <div className="flex">
+              <div className="flex gap-[0.2rem]">
                 {value ? (
                   <Link to="/home">
-                    <button className="g-btn">
+                    <button className="text-lg py-[0.7rem] px-[1.5rem] mt-8 rounded-[0.5rem] border-[2px] border-solid border-white cursor-pointer bg-black text-white flex items-center hover:bg-white hover:text-black hover:border-[2px] hover:border-solid hover:border-black hover:translate-y-[-7px] transition-all duration-300">
                       {" "}
                       <TbDoorEnter />
                       Go to pannel
                     </button>
                   </Link>
                 ) : (
-                  <button className="g-btn" onClick={checkData}>
+                  <button
+                    className="text-lg py-[0.7rem] px-[1.5rem] mt-8 rounded-[0.5rem] border-[2px] border-solid border-white cursor-pointer bg-black text-white flex items-center hover:bg-white hover:text-black hover:border-[2px] hover:border-solid hover:border-black hover:translate-y-[-7px] transition-all duration-300"
+                    onClick={checkData}
+                  >
                     <BiCheckCircle />
                     Submit
                   </button>
                 )}
 
                 <Link to="/sign-up">
-                  <button className="g-btn">
+                  <button className="text-lg py-[0.7rem] px-[1.5rem] mt-8 rounded-[0.5rem] border-[2px] border-solid border-white cursor-pointer bg-black text-white flex items-center hover:bg-white hover:text-black hover:border-[2px] hover:border-solid hover:border-black hover:translate-y-[-7px] transition-all duration-300">
                     <BiEditAlt />
                     Sign Up
                   </button>
