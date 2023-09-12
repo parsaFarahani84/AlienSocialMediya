@@ -26,16 +26,16 @@ function Pass() {
         <div className="main-page-log">
           <div className="pass-login">
             <h1 className="h1">
-              <div className="texty-p">
+              <div className="texty-p font-bold justify-center items-center mt-19">
                 <MdAccountCircle className="icon-s" />
                 Set New Account
               </div>
             </h1>
-            <form className="p-parental">
+            <form className="p-parental mt-5">
               <div>
                 <div className="inputs-2">
                   <div>
-                    <label className="label">
+                    <label className="label flex items-center">
                       {" "}
                       <BiUserCircle className="icon-m" />
                       Username
@@ -47,7 +47,7 @@ function Pass() {
                     />
                   </div>
                   <div>
-                    <label className="label">
+                    <label className="label flex items-center">
                       {" "}
                       <BiKey className="icon-m" />
                       Password
@@ -61,7 +61,7 @@ function Pass() {
                 </div>
 
                 <div className="inputs">
-                  <label className="label">
+                  <label className="label flex items-center">
                     {" "}
                     <BiKey className="icon-m" />
                     Comfirm Password
@@ -73,7 +73,7 @@ function Pass() {
                   />
                 </div>
                 <div className="inputs">
-                  <label className="label">
+                  <label className="label flex items-center">
                     {" "}
                     <MdEmail className="icon-m" />
                     Email

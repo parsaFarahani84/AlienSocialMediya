@@ -11,8 +11,6 @@
 
 .texty-p {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
 }
 
 .mother-p {
@@ -53,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #279eff, #0c356a);
+  background-image: linear-gradient(to right bottom, #8ecddd, #4d2db7);
 }
 
 .pass-container img {
@@ -171,9 +169,7 @@
 .label {
   margin-left: 0.5rem;
   font-size: 0.8rem;
-  margin-bottom: -0.5rem;
-  display: flex;
-  align-items: center;
+  margin-bottom: -0.6rem;
   margin-left: -0.4rem;
   z-index: 99;
 }
@@ -184,12 +180,6 @@
   justify-content: space-between;
 }
 
-.forget-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.forget-div p {
+/* .forget-div p {
   color: #7a7a7a;
-}
+} */

@@ -37,26 +37,26 @@ function Pass() {
           <div className="pass-login">
             <h1 className="h1">
               {wel ? (
-                <div className="texty-p">
+                <div className="texty-p font-bold justify-center items-center m-4">
                   <GiAlienStare className="icon-s" />
                   Welcome Back
                 </div>
               ) : value ? (
-                <div className="texty-p" style={{ fontSize: "2rem" }}>
+                <div className="texty-p font-bold justify-center items-center m-4 text-pl">
                   <FaDoorOpen className="icon-s" />
                   Enter To Your Panel.
                 </div>
               ) : (
-                <div className="texty-p">
+                <div className="texty-p font-bold justify-center items-center m-4">
                   <GiArchitectMask className="icon-s" />
                   Try Again...
                 </div>
               )}
             </h1>
-            <form className="p-parental" onSubmit={checkData}>
+            <form className="p-parental mt-1" onSubmit={checkData}>
               <div>
                 <div className="inputs">
-                  <label className="label">
+                  <label className="label flex items-center">
                     {" "}
                     <BiUserCircle className="icon-m" />
                     username
@@ -69,7 +69,7 @@ function Pass() {
                 </div>
 
                 <div className="inputs">
-                  <label className="label">
+                  <label className="label flex items-center">
                     <BiKey className="icon-m" />
                     password
                   </label>
@@ -107,9 +107,9 @@ function Pass() {
               </div>
             </form>
           </div>
-          <div className="forget-div">
+          <div className="w-full flex justify-center">
             <Link to="/change">
-              <p>Forget Password?</p>
+              <p className="text-gray-500 mb-3">Forget Password?</p>
             </Link>
           </div>
         </div>

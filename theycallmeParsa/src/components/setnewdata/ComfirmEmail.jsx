@@ -10,38 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import img from "../../imgs/l-4.svg";
 
 function Pass() {
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
-  const [truedata, setTrueData] = useState(false);
-  const [trueUser, setTrueUser] = useState("");
-  const [truePass, setTruePass] = useState("");
-  const [data, setData] = useAtom(Atom);
-
-  const changedData = (e) => {
-    e.preventDefault();
-
-    if (user.length > 0 && pass.length > 0) {
-      setData({
-        name: user,
-        pass: pass,
-      });
-
-      toast("Data Updated");
-    } else {
-      toast.warn("No Data Passed");
-    }
-  };
-
-  const checkDataTrue = function (e) {
-    e.preventDefault();
-    if (trueUser === data.name && truePass === data.pass) {
-      setTrueData(true);
-    }
-    setTruePass("");
-    setTrueUser("");
-    setUser("");
-    setPass("");
-  };
   // use import { ToastContainer, toast } from "react-toastify";
 
   return (
@@ -54,15 +22,15 @@ function Pass() {
         <div className="main-page-log">
           <div className="pass-login">
             <h1 className="h1">
-              <div className="texty-p">
+              <div className="texty-p font-bold justify-center items-center mt-4">
                 <FaExchangeAlt className="icon-s" />
                 Change Password
               </div>
             </h1>
-            <form className="p-parental">
+            <form className="p-parental mt-8">
               <div>
                 <div className="inputs">
-                  <label className="label">
+                  <label className="label flex items-center">
                     {" "}
                     <MdEmail className="icon-m" />
                     Your Email
