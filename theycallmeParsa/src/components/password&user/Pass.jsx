@@ -24,30 +24,29 @@ function Pass() {
     }
     setWel(false);
   };
-  // pass-image2
 
   return (
-    <div className="mother-p">
-      <div className="pass-container">
-        <div className="pass-image">
-          <img src={img} />
+    <div className="w-[95vw] flex items-center justify-center">
+      <div className="pass-container w-[60rem] h-[33rem] bg-white mt-4 rounded-lg grid overflow-hidden">
+        <div className="pass-image flex items-center justify-center">
+          <img className="w-[80%]" src={img} />
         </div>
 
         <div className="main-page-log">
-          <div className="pass-login">
-            <h1 className="h1">
+          <div className="p-8 flex flex-col">
+            <h1 className="flex items-center justify-center text-[2.2rem]">
               {wel ? (
-                <div className="texty-p font-bold justify-center items-center m-4">
+                <div className="flex font-bold justify-center items-center m-4">
                   <GiAlienStare className="icon-s" />
                   Welcome Back
                 </div>
               ) : value ? (
-                <div className="texty-p font-bold justify-center items-center m-4 text-pl">
+                <div className="flex font-bold justify-center items-center m-4 text-pl">
                   <FaDoorOpen className="icon-s" />
                   Enter To Your Panel.
                 </div>
               ) : (
-                <div className="texty-p font-bold justify-center items-center m-4">
+                <div className="flex font-bold justify-center items-center m-4">
                   <GiArchitectMask className="icon-s" />
                   Try Again...
                 </div>
@@ -55,26 +54,26 @@ function Pass() {
             </h1>
             <form className="p-parental mt-1" onSubmit={checkData}>
               <div>
-                <div className="inputs">
-                  <label className="label flex items-center">
+                <div className="w-100 flex justify-center mt-8 items-start flex-col">
+                  <label className="ml-[-0.4rem] text-[0.8rem] mb-[-0.6rem] flex items-center z-99">
                     {" "}
                     <BiUserCircle className="icon-m" />
                     username
                   </label>
                   <input
-                    className="cool-link"
+                    className="focus:outline-none cool-link py-4 px-2 w-80 text-lg border-none leading-4"
                     placeholder="User"
                     onChange={(e) => setUser(e.target.value)}
                   />
                 </div>
 
-                <div className="inputs">
-                  <label className="label flex items-center">
+                <div className="w-100 flex justify-center mt-8 items-start flex-col">
+                  <label className="ml-[-0.4rem] text-[0.8rem] mb-[-0.6rem] flex items-center z-99">
                     <BiKey className="icon-m" />
                     password
                   </label>
                   <input
-                    className="cool-link"
+                    className="focus:outline-none cool-link py-4 px-2 w-80 text-lg border-none leading-4 cool-link"
                     type="password"
                     placeholder="Password"
                     onChange={(e) => setPass(e.target.value)}
@@ -82,7 +81,7 @@ function Pass() {
                 </div>
               </div>
 
-              <div className="grouped">
+              <div className="flex">
                 {value ? (
                   <Link to="/home">
                     <button className="g-btn">

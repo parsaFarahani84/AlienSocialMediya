@@ -1,67 +1,25 @@
 .pass-container {
-  width: 60rem;
-  height: 33rem;
-  background-color: white;
-  margin-top: 1rem;
-  border-radius: 1rem;
-  display: grid;
   grid-template-columns: 1.3fr 1fr;
-  overflow: hidden;
 }
 
-.texty-p {
-  display: flex;
-}
-
-.mother-p {
-  width: 95vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .pass-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #937af9, #191d88);
 }
 
 .pass-image2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #7091f5, #793fdf);
 }
 
 .pass-image3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #504099, #313866);
 }
 
 .pass-image4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #7091f5, #35155d);
 }
 
 .pass-image5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right bottom, #8ecddd, #4d2db7);
-}
-
-.pass-container img {
-  width: 70%;
-}
-
-.pass-login {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .both-in {
@@ -69,13 +27,8 @@
   gap: 0.5rem;
 }
 
-.pass-login input {
-  padding: 1rem 0.5rem;
-  width: 80%;
-  font-size: 1rem;
-  border: none;
+.cool-link {
   transition: all 0.3s;
-  line-height: 1;
   background: linear-gradient(to right, rgb(9, 9, 9), rgb(0, 0, 0)),
     linear-gradient(
       to right,
@@ -89,16 +42,8 @@
   transition: background-size 400ms;
 }
 
-.pass-login input:focus {
+.cool-link:focus {
   background-size: 0 2px, 100% 2px;
-}
-
-.h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.2rem;
 }
 
 .icon-p {
@@ -111,36 +56,6 @@
 
 .icon-m {
   font-size: 0.9rem;
-}
-
-.inputs {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.inputs-2 {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* justify-content: center;
-  align-items: flex-start; */
-  margin-top: 2rem;
-}
-
-.inputs input:focus {
-  outline: none;
-}
-
-.inputs-2 input:focus {
-  outline: none;
-}
-
-.grouped {
-  display: flex;
 }
 
 .g-btn {
@@ -166,20 +81,8 @@
   border: 2px solid black;
 }
 
-.label {
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-  margin-bottom: -0.6rem;
-  margin-left: -0.4rem;
-  z-index: 99;
-}
-
 .main-page-log {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-/* .forget-div p {
-  color: #7a7a7a;
-} */
