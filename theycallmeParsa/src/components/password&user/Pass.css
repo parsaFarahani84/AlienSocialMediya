@@ -49,6 +49,13 @@
   background-image: linear-gradient(to right bottom, #7091f5, #35155d);
 }
 
+.pass-image5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #279eff, #0c356a);
+}
+
 .pass-login {
   padding: 2rem;
   display: flex;

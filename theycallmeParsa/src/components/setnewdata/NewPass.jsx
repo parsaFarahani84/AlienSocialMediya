@@ -45,38 +45,24 @@ function Pass() {
         <div className="main-page-log">
           <div className="pass-login">
             <h1 className="h1">
-              <div className="texty-p">
+              <div className="texty-p" style={{ fontSize: "2rem" }}>
                 <MdAccountCircle className="icon-s" />
-                Set New Account
+                Set New Password
               </div>
             </h1>
             <form className="p-parental">
               <div>
-                <div className="inputs-2">
-                  <div>
-                    <label className="label">
-                      {" "}
-                      <BiUserCircle className="icon-m" />
-                      Username
-                    </label>
-                    <input
-                      className="cool-link"
-                      placeholder="Username"
-                      type="email"
-                    />
-                  </div>
-                  <div>
-                    <label className="label">
-                      {" "}
-                      <BiKey className="icon-m" />
-                      Password
-                    </label>
-                    <input
-                      className="cool-link"
-                      placeholder="Password"
-                      type="email"
-                    />
-                  </div>
+                <div className="inputs">
+                  <label className="label">
+                    {" "}
+                    <BiKey className="icon-m" />
+                    Password
+                  </label>
+                  <input
+                    className="cool-link"
+                    placeholder="Password"
+                    type="email"
+                  />
                 </div>
 
                 <div className="inputs">
