@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  BiCheckCircle,
-  BiLogInCircle,
-  BiUserCircle,
-  BiKey,
-} from "react-icons/bi";
+import { BiCheckCircle, BiLogInCircle, BiKey } from "react-icons/bi";
 import { MdEmail, MdAccountCircle } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
@@ -14,28 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import img from "../../imgs/l.svg";
 
 function Pass() {
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
-  const [truedata, setTrueData] = useState(false);
-  const [trueUser, setTrueUser] = useState("");
-  const [truePass, setTruePass] = useState("");
-  const [data, setData] = useAtom(Atom);
-
-  const changedData = (e) => {
-    e.preventDefault();
-
-    if (user.length > 0 && pass.length > 0) {
-      setData({
-        name: user,
-        pass: pass,
-      });
-
-      toast("Data Updated");
-    } else {
-      toast.warn("No Data Passed");
-    }
-  };
-
   // use import { ToastContainer, toast } from "react-toastify";
 
   return (
