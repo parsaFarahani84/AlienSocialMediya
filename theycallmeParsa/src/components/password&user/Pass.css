@@ -56,6 +56,10 @@
   background-image: linear-gradient(to right bottom, #279eff, #0c356a);
 }
 
+.pass-container img {
+  width: 70%;
+}
+
 .pass-login {
   padding: 2rem;
   display: flex;

@@ -7,6 +7,7 @@ import { FaDoorOpen } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import Atom from "../../Atom";
+import img from "../../imgs/l-3.svg";
 
 function Pass() {
   const [value, setValue] = useState(false);
@@ -28,7 +29,9 @@ function Pass() {
   return (
     <div className="mother-p">
       <div className="pass-container">
-        <div className="pass-image">{/* <img src={img} /> */}</div>
+        <div className="pass-image">
+          <img src={img} />
+        </div>
 
         <div className="main-page-log">
           <div className="pass-login">

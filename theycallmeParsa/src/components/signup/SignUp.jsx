@@ -11,6 +11,7 @@ import { useAtom } from "jotai";
 import Atom from "../../Atom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import img from "../../imgs/l-2.svg";
 
 function Pass() {
   const [user, setUser] = useState("");
@@ -40,7 +41,9 @@ function Pass() {
   return (
     <div className="mother-p">
       <div className="pass-container">
-        <div className="pass-image5">{/* <img src={img} /> */}</div>
+        <div className="pass-image5">
+          <img src={img} />
+        </div>
 
         <div className="main-page-log">
           <div className="pass-login">
