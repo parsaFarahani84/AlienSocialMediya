@@ -61,3 +61,9 @@ a {
 .cool-link:focus {
   background-size: 0 2px, 100% 2px;
 }
+
+.user-mother {
+  max-height: 70vh;
+  overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+  overflow-x: hidden;
+}

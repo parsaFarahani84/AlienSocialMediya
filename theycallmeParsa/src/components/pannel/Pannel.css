@@ -18,13 +18,19 @@
 
 .left-panel {
   background-color: rgb(243, 243, 243);
-  width: 15rem;
+  width: 17rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   justify-content: space-between;
   height: 95vh;
+}
+
+.user-mother {
+  max-height: 70vh;
+  overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+  overflow-x: hidden;
 }
 
 .main-panel {
@@ -86,12 +92,13 @@
 .nav-item {
   display: flex;
   align-items: center;
+  border-radius: 0.75rem;
   padding: 0.5rem;
   align-items: center;
   cursor: pointer;
   transition: all 0.2s;
   height: 3rem;
-  border-bottom: 2px solid rgb(194, 194, 194);
+  /* border-bottom: 2px solid rgb(194, 194, 194); */
 }
 
 .faces {
@@ -101,11 +108,8 @@
   margin-right: 0.3rem;
 }
 
-.nav-item:hover {
-  scale: 1.05;
+.one-whole-container:hover {
   background-color: #d9d9d9;
-  /* color: #fff; */
-  /* border: 2px solid #fff; */
 }
 
 .appear {
