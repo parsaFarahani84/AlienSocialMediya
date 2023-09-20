@@ -4,7 +4,7 @@ import {
   BsArrow90DegLeft,
   BsFillBookmarkFill,
 } from "react-icons/bs";
-import { BiSolidCircle } from "react-icons/bi";
+import axios from "axios";
 import { SiRoundcube } from "react-icons/si";
 import { FiArrowDownRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -16,33 +16,39 @@ function LeftPanel() {
   const [data, setData] = useAtom(Atom);
   const [users, setUsers] = useState([]);
 
-  // const handleAPI = async () => {
-  //   const API = await fetch("http://45.139.10.86/api/users/");
-  //   console.log(API.json());
-  // };
-
   useEffect(() => {
-    // Define the URL of the API you want to fetch data from
+    // Define the API URL
     const apiUrl = "http://45.139.10.86/api/users/"; // Replace with your API URL
 
-    // Create a function to fetch and log data
+    // Create an async function to fetch and log data
     const fetchData = async () => {
       try {
-        const response = await fetch(apiUrl);
+        const response = await axios.get(apiUrl);
 
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+        if (response.status !== 200) {
+          throw new Error("Request failed with status " + response.status);
         }
 
-        const data = await response.json();
+        const data = response.data;
         setUsers(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
+    // Call the fetchData function when the component mounts
     fetchData();
   }, []);
+
+  const handleAPI = () => {
+    axios.post("http://45.139.10.86/api/users/", {
+      username: "ali tajili",
+      password: "dfdsfsffsgfg",
+      email: "mnmn.ali-tajili@example.net",
+    });
+    console.log("Posted!");
+  };
+
   return (
     <div>
       {" "}
@@ -78,12 +84,12 @@ function LeftPanel() {
 
           <div className="user-mother flex flex-col gap-2">
             {users.map((i) => (
-              <div className="one-whole-container py-1 rounded-lg">
-                <div
-                  className="nav-item"
-                  key={i.id}
-                  onClick={() => handleAPI()}
-                >
+              <div
+                className="one-whole-container py-1 rounded-lg"
+                onClick={() => handleAPI()}
+                key={i.id}
+              >
+                <div className="nav-item">
                   <img className="faces" src={face} />
                   <h4>
                     <div className="center max-w-[100px] overflow-hidden whitespace-nowrap text-ellipsis">

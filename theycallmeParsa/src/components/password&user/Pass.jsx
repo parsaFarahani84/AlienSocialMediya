@@ -23,6 +23,14 @@ function Pass() {
     setWel(false);
   };
 
+  const handleAPI = () => {
+    axios.post("http://45.139.10.86/api/users/", {
+      username: "ali tajili",
+      email: "mnmn.ali tajili@example.net",
+    });
+    console.log("Posted!");
+  };
+
   return (
     <div className="w-[95vw] flex items-center justify-center">
       <div className="pass-container w-[60rem] h-[33rem] bg-white mt-4 rounded-lg grid overflow-hidden">
