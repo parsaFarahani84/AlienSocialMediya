@@ -17,10 +17,8 @@ function LeftPanel() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Define the API URL
-    const apiUrl = "http://45.139.10.86/api/users/"; // Replace with your API URL
+    const apiUrl = "http://45.139.10.86/api/users/";
 
-    // Create an async function to fetch and log data
     const fetchData = async () => {
       try {
         const response = await axios.get(apiUrl);
@@ -47,9 +45,8 @@ function LeftPanel() {
     //   email: "mnmn.ali-tajili@example.net",
     // });
     // console.log("Posted!");
-
-    axios.delete(`http://45.139.10.86/api/users/${id}`);
-    console.log("Deleted!", id);
+    // axios.delete(`http://45.139.10.86/api/users/${id}`);
+    // console.log("Deleted!", id);
   };
 
   return (

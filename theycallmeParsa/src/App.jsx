@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Pass from "./components/password&user/Pass";
-import NewPass from "./components/setnewdata/NewPass";
-import ComfirmEmail from "./components/setnewdata/ComfirmEmail";
+import Pass from "./components/log_in_page/Pass";
+import NewPass from "./components/log_in_page/NewPass";
+import ComfirmEmail from "./components/log_in_page/ComfirmEmail";
+import SignUp from "./components/log_in_page/SignUp";
 import Pannel from "./components/pannel/Pannel";
-import SignUp from "./components/signup/SignUp";
 
 function App() {
   return (
