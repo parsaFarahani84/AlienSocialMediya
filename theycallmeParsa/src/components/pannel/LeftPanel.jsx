@@ -40,13 +40,16 @@ function LeftPanel() {
     fetchData();
   }, []);
 
-  const handleAPI = () => {
-    axios.post("http://45.139.10.86/api/users/", {
-      username: "ali tajili",
-      password: "dfdsfsffsgfg",
-      email: "mnmn.ali-tajili@example.net",
-    });
-    console.log("Posted!");
+  const handleAPI = (id) => {
+    // axios.post("http://45.139.10.86/api/users/", {
+    //   username: "ali tajili",
+    //   password: "dfdsfsffsgfg",
+    //   email: "mnmn.ali-tajili@example.net",
+    // });
+    // console.log("Posted!");
+
+    axios.delete(`http://45.139.10.86/api/users/${id}`);
+    console.log("Deleted!", id);
   };
 
   return (
@@ -86,7 +89,7 @@ function LeftPanel() {
             {users.map((i) => (
               <div
                 className="one-whole-container py-1 rounded-lg"
-                onClick={() => handleAPI()}
+                onClick={() => handleAPI(i.id)}
                 key={i.id}
               >
                 <div className="nav-item">
