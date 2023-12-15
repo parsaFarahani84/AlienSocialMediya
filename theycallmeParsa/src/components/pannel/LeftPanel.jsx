@@ -34,7 +34,6 @@ function LeftPanel() {
       }
     };
 
-    // Call the fetchData function when the component mounts
     fetchData();
   }, []);
 
